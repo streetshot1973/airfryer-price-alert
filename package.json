@@ -1,0 +1,12 @@
+{
+  "name": "airfryer-price-alert",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "check": "node src/check-price.mjs"
+  },
+  "dependencies": {
+    "nodemailer": "^9.0.3"
+  }
+}
