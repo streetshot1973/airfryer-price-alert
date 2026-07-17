@@ -12,7 +12,7 @@ import { searchDuckDuckGo } from './search.mjs';
 import { fetchAndExtractPrice } from './extractPrice.mjs';
 import { sendPriceDropEmail } from './email.mjs';
 
-const PRODUCT_LABEL = 'Air Fryer Electrolux EAF90 (Rita Lobo, com espeto giratório)';
+const PRODUCT_LABEL = 'Air Fryer Kitchen Art 16L 4 em 1 com Espeto Rotisserie KAF16A (127V)';
 
 function titleMatches(title, url) {
   const lower = `${title} ${url}`.toLowerCase();
@@ -43,7 +43,7 @@ async function main() {
     .filter((r) => !blockedUrlPatterns.some((re) => re.test(r.url)))
     .slice(0, maxResultsToVisit);
 
-  console.log(`  ${candidates.length} candidatos após filtro (EAF90, sem EAF85/peças/whatsapp).`);
+  console.log(`  ${candidates.length} candidatos após filtro (KAF16A 127V, sem 220V/peças/whatsapp).`);
 
   const offers = [];
   const unconfirmed = [];
@@ -55,8 +55,8 @@ async function main() {
     }
 
     // revalida o NOME real extraído da página (não só o snippet da busca) contra o
-    // mesmo filtro de modelo — pega casos como catálogo errado do comparador (ex:
-    // Buscapé listando "EAF9 ... 3,5l" na URL do EAF90).
+    // mesmo filtro de modelo — pega casos de catálogo errado do comparador (modelo/URL
+    // batem mas o JSON-LD é de outro produto).
     const nameLooksRight = result.name ? titleMatches(result.name, '') : false;
 
     if (result.method === 'jsonld' && nameLooksRight) {

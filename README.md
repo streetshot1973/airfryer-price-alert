@@ -1,15 +1,15 @@
 # airfryer-price-alert
 
-Rastreador de preço da Air Fryer Electrolux EAF90 (Rita Lobo, com espeto giratório).
+Rastreador de preço da Air Fryer Kitchen Art 16L 4 em 1 com Espeto Rotisserie KAF16A (127V).
 Roda de hora em hora via GitHub Actions: busca no DuckDuckGo, visita as páginas de produto
 encontradas, lê o preço (dado estruturado JSON-LD, com fallback por regex) e manda e-mail
 quando o menor preço encontrado cai em relação à checagem anterior.
 
 ## Cobertura
 
-Funciona bem para: loja oficial Electrolux, Amazon, e a maioria das lojas menores que
-aparecem na busca. **Não funciona** para Mercado Livre, Magazine Luiza e Casas Bahia — esses
-sites bloqueiam leitura automatizada mesmo em páginas de produto individuais.
+Funciona bem para: Amazon e a maioria das lojas menores que aparecem na busca. **Não
+funciona** para Mercado Livre, Magazine Luiza e Casas Bahia — esses sites bloqueiam leitura
+automatizada mesmo em páginas de produto individuais (bloqueio é por site, não por produto).
 
 ## Configuração necessária no GitHub (Settings → Secrets and variables → Actions)
 
