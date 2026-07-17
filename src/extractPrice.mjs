@@ -23,6 +23,12 @@ function extractFromJsonLd(html) {
 
         const offers = Array.isArray(c.offers) ? c.offers : [c.offers];
         for (const offer of offers) {
+          // pula oferta explicitamente marcada como fora de estoque/descontinuada. Se o campo
+          // não vier preenchido, assume disponível (nem todo site declara isso) — não blinda
+          // contra sites onde a disponibilidade real só é resolvida por JS no navegador (ex:
+          // marketplace da Americanas, que declara InStock no HTML estático mesmo esgotado).
+          if (offer.availability && /outofstock|discontinued|soldout/i.test(offer.availability)) continue;
+
           const price = offer.price ?? offer.lowPrice;
           if (price) {
             const numeric = Number(String(price).replace(',', '.'));
