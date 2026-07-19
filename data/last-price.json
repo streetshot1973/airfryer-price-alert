@@ -1,16 +1,21 @@
 {
-  "lowestPrice": 569.9,
+  "lowestPrice": 559.9,
   "bestOffer": {
-    "price": 569.9,
-    "name": "Air Fryer Kitchen Art 16L 4 em 1 com Espeto Rotisserie KAF16A 127V",
-    "finalUrl": "https://www.carrefour.com.br/produto/air-fryer-kitchen-art-l-em-com-espeto-rotisserie-kafa-v-334115858"
+    "price": 559.9,
+    "name": "Air Fryer Kitchen Art 16L 4 em 1 com Espeto Rotisserie KAF16A",
+    "finalUrl": "https://www.philco.com.br/fritadeira-air-fryer-kaf16a-127v-063801116/p"
   },
   "allOffers": [
+    {
+      "price": 559.9,
+      "name": "Air Fryer Kitchen Art 16L 4 em 1 com Espeto Rotisserie KAF16A",
+      "finalUrl": "https://www.philco.com.br/fritadeira-air-fryer-kaf16a-127v-063801116/p"
+    },
     {
       "price": 569.9,
       "name": "Air Fryer Kitchen Art 16L 4 em 1 com Espeto Rotisserie KAF16A 127V",
       "finalUrl": "https://www.carrefour.com.br/produto/air-fryer-kitchen-art-l-em-com-espeto-rotisserie-kafa-v-334115858"
     }
   ],
-  "checkedAt": "2026-07-19T11:11:40.809Z"
+  "checkedAt": "2026-07-19T13:25:00.501Z"
 }
